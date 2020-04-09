@@ -495,4 +495,18 @@ input, textarea  {
 		height:1000px;
 	}
 
+	#contact
+	{
+		width:650px;
+	}
+
+	#contactTitle
+	{
+		width:650px;
+	}
+
+	.divider
+	{
+		display:none;
+	}
 }
