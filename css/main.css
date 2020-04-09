@@ -1,0 +1,400 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*basic reset*/
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,p,body,header,footer,section,article,nav 
+{ 
+	margin: 0; 
+	padding: 0; 
+}	
+
+img 
+{ 
+	border: none; /*Remove border if image is a link*/
+	margin: 0; 
+	padding: 0; 
+}
+
+/*html selectors*/
+
+body 
+{
+	font-family: "Courier New", Courier, monospace;
+	font-weight:bold;
+	font-size: 12px;
+	color: #333;
+	background-image: url(../images/paper_background.jpg);
+}
+
+
+/*a:link is for not visited(standard unclicked link), 
+a:visited is for visited, and just a applies to both.*/
+/*a will also style anchor links*/
+
+a:link, a:visited 
+{ 
+ 	text-decoration:none; 	
+}
+
+a:hover, a:active 
+{ 
+	text-decoration:none; 
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden
+{
+	display: none;
+}
+
+.selected
+{
+	text-decoration:underline;
+}
+
+/*section is block level and no width specidied therefore stretches full screen*/
+#topBar
+{
+	background-color: #35363a;
+	height: 20px;
+}
+
+/*Site Container*/
+/*This is essentially a box that we place the whole site in.  
+We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 20px (960px) so it fits on 1024x768 screens.*/
+
+#siteContainer 
+{
+	margin: 0 auto;
+	width: 1300px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#mainHeader
+{
+	margin-top: 20px;
+	padding-bottom:20px;
+	display: flex;
+  	justify-content: space-around;
+	border-bottom: solid 1px #DDD;
+	flex-wrap:wrap;
+}
+
+#logo img
+{
+	height:80px;
+}
+
+
+/*This is also a flex item*/
+/*We use margin left auto to send it all the way to the right*/
+#mainNav 
+{
+	width: 450px;
+	display: flex;
+	justify-content: space-around;
+	font-size:24px; 
+	align-items:flex-end;
+}
+
+#mainNav div a
+{
+	color:black;
+}
+
+#mainNav div a:hover
+{
+	color:#65c45e;
+}
+
+#welcome
+{
+	padding-top:30px;
+	padding-bottom:30px;
+	display:flex;
+	justify-content:center;
+	border-bottom:solid 1px #DDD;
+}
+
+#welcomeImage
+{
+	width:1200px;
+	height:800px;
+  	background-image:url(../images/night_headlights_banner.jpg);
+  	background-repeat:no-repeat;
+  	
+}
+
+#welcomeImage h1
+{
+	color:white;
+	padding-left:40px;
+	font-size:40px;
+	font-weight:normal;
+	/*border: solid 1px limegreen;*/
+}
+
+#welcomeImage p
+{
+	padding-left: 40px;
+	padding-right: 40px;
+	color:white;
+	font-size:26px;
+	font-weight:normal;
+}
+
+#mainFooter 
+{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	display: flex;
+  	justify-content: center;
+  	/*border-top:solid 1px #DDD;*/
+  	height:80px;
+}
+
+#footerNav 
+{
+	width: 330px;
+	display: flex;
+	justify-content:center;
+	flex-direction:row;
+	align-items:center;
+	flex-wrap:wrap;
+	border-right: solid 1px #DDD;
+	font-size:14px;
+}
+
+#footerNav div a
+{
+	color:black;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+#footerNav div a:hover
+{
+	color:#65c45e;
+}
+
+#socialMedia
+{
+	width:330px;
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	border-right: solid 1px #DDD;
+}
+
+#copyRight 
+{
+	width: 330px;
+}
+
+#copyRight h3
+{
+	padding-left:40px;
+	padding-top:15px;
+}
+
+/*=================| Page 2 - About Me |=================*/
+
+
+.aboutMe_parent
+{
+	border-bottom: solid 1px #DDD;
+	padding-top:20px;
+	padding-bottom:20px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items: center;
+	height:450px;
+	/*border:solid 1px blue;*/
+}
+
+.aboutMe_parent_mirrored
+{
+	border-bottom: solid 1px #DDD;
+	padding-top:20px;
+	padding-bottom:20px;
+	display:flex;
+	flex-direction:row-reverse;
+	flex-wrap:wrap-reverse;
+	justify-content:center;
+	align-items: center;
+	height:450px;
+	/*border:solid 1px blue;*/
+}
+
+.aboutMe_text
+{
+	width:500px;
+	height:400px;
+	font-size:24px;
+	align-self:center;
+	/*border:solid 1px black;*/
+}
+
+.divider
+{
+	/*border:solid 1px black;*/
+	height: 450px;
+}
+
+.aboutMe_image
+{
+	width:400px;
+	padding-right:50px;
+	padding-left:50px;
+}
+
+
+#SteamProfileImage
+{
+	position:relative;
+	width:50%;
+	max-width:400px;
+}
+
+.image
+{
+	display:block;
+	width:100%;
+	height:auto;
+}
+
+.overlay
+{
+	position: absolute;
+	bottom: 0;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.5);
+	color: #f1f1f1;
+	width: 360px;
+	transition: .5s ease;
+	opacity:0;
+	color: white;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
+}
+
+#SteamProfileImage:hover .overlay
+{
+	opacity: 1;
+}
+
+/*=================| Page 3 - Gallery |=================*/
+
+#siteContainerGallery 
+{
+	margin: 0 auto;
+	width: 1300px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#featuredImage
+{
+	border-bottom:solid 1px #DDD;
+	padding-top:30px;
+	padding-bottom:30px;
+
+	/*border:solid 1px black;*/
+}
+
+#featuredImage img
+{
+	width:100%;
+	height:100%;
+}
+
+#mainGallery
+{
+	width:100%;
+	display:flex;
+	flex-wrap:wrap;
+	align-content:center;
+	padding-top:30px;
+	/*border:solid 1px green;*/
+}
+
+.galleryImage
+{
+	/*border:solid 1px black;*/
+	width:300px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+}
+
+/*=================|END|=================*/
+
+@media screen AND (max-width:1300px) {
+	#mainHeader
+	{
+		width:1100px;
+	}
+	#mainFooter
+	{
+		width:1000px;
+	}
+	#welcomeImage
+	{
+		width:1000px;
+	}
+}
+
+
+@media screen AND (max-width:960px) {
+
+	#welcome
+	{
+		width:650px;
+	}
+	#welcomeImage
+	{
+		width:650px;
+		background-size:100%;
+	}
+
+	#mainHeader 
+	{
+		width:650px;
+		align-self:center;
+	}
+
+	#featuredImage
+	{
+		width:650px;
+	}
+
+	#mainGallery
+	{
+		width:650px;
+	}
+
+	#mainFooter
+	{
+		width:650px;
+	}
+
+	#aboutMe_parent
+	{
+		width:650px;
+		height:1000px;
+	}
+
+	#aboutMe_parent_mirrored
+	{
+		width:650px;
+		height:1000px;
+	}
+
+}
