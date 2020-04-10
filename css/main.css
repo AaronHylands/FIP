@@ -373,6 +373,12 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 
 #contactForm/*<-- Item*/
 {
+	padding-top:35px;
+	/*border:solid 1px blue;*/
+}
+
+#contactForm_container/*<-- Item*/
+{
 	padding-top:20px;
 	/*border:solid 1px blue;*/
 }
@@ -434,20 +440,6 @@ input, textarea  {
 
 /*=================|END|=================*/
 
-@media screen AND (max-width:1300px) {
-	#mainHeader
-	{
-		width:1100px;
-	}
-	#mainFooter
-	{
-		width:1000px;
-	}
-	#welcomeImage
-	{
-		width:1000px;
-	}
-}
 
 
 @media screen AND (max-width:960px) {
@@ -483,16 +475,19 @@ input, textarea  {
 		width:650px;
 	}
 
-	#aboutMe_parent
+	.aboutMe_parent
 	{
 		width:650px;
-		height:1000px;
+		height:1200px;
+		flex-direction:column;
+		padding-top:10px;
 	}
 
-	#aboutMe_parent_mirrored
+	.aboutMe_parent_mirrored
 	{
 		width:650px;
 		height:1000px;
+		flex-direction:column;
 	}
 
 	#contact
